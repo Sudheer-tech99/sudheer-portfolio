@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sudheer | Portfolio</title>
+
+   <link rel="stylesheet" href="{% static 'Css/style.css' %}">
+</head>
+<body>
+
+    <div class="welcome-container">
+
+        <div class="glow-circle circle-one"></div>
+        <div class="glow-circle circle-two"></div>
+
+        <div class="welcome-content">
+
+            <p class="welcome-label">WELCOME TO MY DIGITAL WORLD</p>
+
+            <h1>Hi, I'm <span>Sudheer</span></h1>
+
+            <h2>Python Full Stack Developer</h2>
+
+            <p class="description">
+                I build websites, explore new technologies,
+                and turn ideas into useful digital experiences.
+            </p>
+
+            <a href="{% url 'home' %}" class="welcome-button">
+    Enter Portfolio <span>→</span>
+</a>
+
+        </div>
+        
+         <div class="profile-image">
+            <img src="{% static 'Images/profile.png' %}" alt="My profile photo">
+        </div>
+
+    </div>
+
+    <script src="Js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,501 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudheer | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'Css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %} 
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark portfolio-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                Sudheer<span>.</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#portfolioNavbar"
+                aria-controls="portfolioNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--hero section-->
+<section id="home" class="home-section">
+    <div class="container hero-layout">
+
+        <div class="hero-content">
+            <p class="welcome-label">HI, I'M SUDHEER</p>
+
+            <h1>
+                Turning Code Into
+                <span>Real Solutions.</span>
+            </h1>
+
+            <p class="home-description">
+                I'm a Python Full Stack Developer who enjoys building
+                web applications, solving problems, and learning new
+                technologies. Every project helps me grow a little more.
+            </p>
+
+            <a href="#projects" class="btn portfolio-button">
+                View My Projects
+            </a>
+
+            <a href="#contact" class="btn contact-button">
+                Contact Me
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img src="{% static 'Images/hero.jpg' %}" alt="Profile photo">
+        </div>
+
+    </div>
+</section>
+
+<!-- About Section -->
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-layout">
+
+            <!-- Left: Personal Introduction -->
+            <div class="about-content">
+                <p class="section-label">01 / ABOUT ME</p>
+
+                <h2>A little <span>about me.</span></h2>
+
+                <p class="about-text">
+                    I'm Sudheer, a Computer Science graduate working
+                    toward a career in software development. I enjoy
+                    learning how things work, solving problems, and
+                    turning my knowledge into practical projects.
+                </p>
+
+                <p class="about-quote">
+                    "My starting point doesn't decide my destination."
+                </p>
+            </div>
+
+            <!-- Right: Personal Details -->
+            <div class="about-details">
+
+                <div class="about-card">
+                    <span class="about-icon">&#127891;</span>
+                    <div>
+                        <h3>Education</h3>
+                        <p>B.Tech in Computer Science</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <span class="about-icon">&lt;/&gt;</span>
+                    <div>
+                        <h3>My Focus</h3>
+                        <p>Python &amp; Web Development</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <span class="about-icon">&#127919;</span>
+                    <div>
+                        <h3>My Goal</h3>
+                        <p>Grow as a software developer</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills-section">
+    <div class="container">
+
+        <p class="section-label">02 / WHAT I WORK WITH</p>
+
+        <h2 class="skills-heading">
+            Skills I've been <span>building.</span>
+        </h2>
+
+        <p class="skills-description">
+            The technologies I've learned and use to build projects.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <span class="skill-symbol">Py</span>
+                <h3>Python</h3>
+                <p>Programming and problem-solving</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-symbol">&lt;/&gt;</span>
+                <h3>HTML &amp; CSS</h3>
+                <p>Web structure and styling</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-symbol">JS</span>
+                <h3>JavaScript</h3>
+                <p>Interactive web pages</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-symbol">DB</span>
+                <h3>SQL</h3>
+                <p>Database queries and data</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-symbol">Dj</span>
+                <h3>Django</h3>
+                <p>Python web development</p>
+            </div>
+
+            <div class="skill-card">
+                <span class="skill-symbol">Np</span>
+                <h3>NumPy &amp; Pandas</h3>
+                <p>Working with data in Python</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <div class="container">
+
+        <p class="section-label">03 / WHAT I'VE BUILT</p>
+
+        <h2 class="projects-heading">
+            One project. <span>Real experience.</span>
+        </h2>
+
+        <p class="projects-description">
+            I learn best by turning knowledge into something practical.
+            Here's a project I worked on with my team.
+        </p>
+
+        <div class="project-grid">
+
+            <article class="project-card">
+
+                <div class="project-top">
+                    <span class="project-number">PROJECT 01</span>
+                    <span class="project-status">Academic Project</span>
+                </div>
+
+                
+    <div id="div" class ="p-4 m-5 ">
+    <h1>Explore the Interface</h1>
+
+    <!-- Main image -->
+    <img
+        src="{% static 'Images/Project/online-transactions1.png' %}"
+        alt="Online Transactions"
+        class="main"
+        id="mainImage"
+    >
+
+    <br><br>
+
+    <!-- Thumbnail images -->
+    <img
+        src="{% static 'Images/Project/online-transactions1.png' %}"
+        alt="Screenshot 1"
+        class="img"
+        onmouseover="changeImage(this)"
+    >
+
+    <img
+        src="{% static 'Images/Project/online-transactions2.png' %}"
+        alt="Screenshot 2"
+        class="img"
+        onmouseover="changeImage(this)"
+    >
+
+    <img
+        src="{% static 'Images/Project/online-transactions3.png' %}"
+        alt="Screenshot 3"
+        class="img"
+        onmouseover="changeImage(this)"
+    >
+
+    <img
+        src="{% static 'Images/Project/online-transactions4.png' %}"
+        alt="Screenshot 4"
+        class="img"
+        onmouseover="changeImage(this)"
+    >
+
+    <img
+        src="{% static 'Images/Project/online-transactions5.png' %}"
+        alt="Screenshot 5"
+        class="img"
+        onmouseover="changeImage(this)"
+    >
+</div>
+
+
+                <div class="project-content">
+
+                    <h3>Protecting Online Transactions</h3>
+
+                    <p class="project-description">
+                        A team project focused on protecting online
+                        transactions using web technologies and
+                        machine-learning tools. I served as team leader
+                        and contributed to the development process.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>Scikit-learn</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <span class="team-role">
+                            <span class="role-dot"></span>
+                            Team Leader · Team of 5
+                        </span>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="resume-section">
+    <div class="container resume-container">
+
+        <p class="section-label">04 / MY RESUME</p>
+
+        <h2 class="resume-heading">
+            The journey <span>so far.</span>
+        </h2>
+
+        <p class="resume-description">
+            I'm building my career through consistent learning,
+            hands-on projects, and improving my development skills.
+            Here's a closer look at my education and experience.
+        </p>
+
+        <div class="resume-card">
+
+            <div class="resume-file-icon">
+                <i class="resume-icon">PDF</i>
+            </div>
+
+            <div class="resume-info">
+                <h3>Sudheer — Resume</h3>
+                <p>
+                    Education · Technical Skills · Projects
+                </p>
+                <span>Python Full Stack Developer</span>
+            </div>
+
+            <a href="Files/resume.pdf"
+               class="resume-download"
+               download>
+                <span>Download Resume</span>
+                <span aria-hidden="true">&#8595;</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+
+        <div class="contact-heading">
+            <p class="section-label">GET IN TOUCH</p>
+            <h2>Let's <span>Connect</span></h2>
+            <p>
+                Have an opportunity, project idea, or question?
+                Send me a message. I'd be happy to connect with you.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+
+            <!-- Contact details -->
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p class="contact-description">
+                    I'm interested in software development opportunities
+                    where I can learn, contribute, and build useful solutions.
+                </p>
+
+                <div class="contact-detail">
+                    <span class="contact-icon">✉</span>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:sudheervenkat92@gmail.com">
+                            sudheervenkat92@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <span class="contact-icon">in</span>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a
+                            href="https://www.linkedin.com/in/yarra-venkata-sudheer-898ba23ba/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View my LinkedIn profile
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <span class="contact-icon">GH</span>
+                    <div>
+                        <h4>GitHub</h4>
+                        <a
+                            href="https://github.com/Sudheer-tech99"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Explore my GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="contact-form-card">
+                <h3>Send Me a Message</h3>
+                <p class="form-description">
+                    Fill in the details below and I'll get back to you.
+                </p>
+
+                
+
+<form action="{% url 'contact' %}" method="POST" class="contact-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            required
+        >
+    </div>
+
+    <div class="form-group full-width">
+        <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+        ></textarea>
+    </div>
+
+    <div class="form-group full-width">
+        <button type="submit">Send Message</button>
+    </div>
+</form>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Other sections will be added step by step -->
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="{% static 'Js/script.js' %}"></script>
+</body>
+</html>

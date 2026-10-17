@@ -1,0 +1,19 @@
+
+# Local database
+db.sqlite3
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+
+# Editor files
+.vscode/
